@@ -1,10 +1,13 @@
-::root {
+:root {
 	--Green200: hsl(148, 38%, 91%);
 	--Green600: hsl(169, 82%, 27%);
 	--Red: hsl(0, 66%, 54%);
 	--White: hsl(0, 0%, 100%);
 	--Grey500: hsl(186, 15%, 59%);
 	--Grey900: hsl(187, 24%, 22%);
+	--Karla: "Karla";
+	--FontWeight400: 400;
+	--FontWeight700: 700;
 }
 
 * {
@@ -13,7 +16,75 @@
 	box-sizing: border-box;
 }
 
-body {
+main {
 	background-color: var(--Green200);
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	font-size: 16px;
+	font-family: var(--Karla);
+}
+
+form {
+	width: 60%;
+	min-height: 60%;
+	max-height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: 30px;
+	background-color: var(--White);
+	border-radius: 25px;
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+button {
+	background-color: var(--Green600);
+	color: var(--White);
+	border: none;
+	border-radius: 10px;
+	padding: 15px 0;
+	font-weight: var(--FontWeight700);
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid var(--Grey500);
+}
+
+.enquiry {
+	width: 100%;
+	border: 1px solid var(--Grey500);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 10px;
+	gap: 10px;
+}
+.enquiry > input {
+	height: 50%;
+	width: fit-content;
+}
+
+#message {
+	height: 8vh;
+}
+#consent {
+	width: fit-content;
+	margin-right: 20px;
+}
+span {
+	display: none;
 }

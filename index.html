@@ -24,42 +24,51 @@
 		<main>
 			<form action="">
 				<h1>Contact Us</h1>
+				<section>
+					<div>
+						<label for="firstName"> First Name *</label>
+						<input type="text" name="firstName" required />
+						<span>This field is required</span>
+					</div>
+					<div>
+						<label for="lastName">Last Name *</label>
+						<input type="text" name="lastName" required />
+						<span>This field is required</span>
+					</div>
+				</section>
+
 				<div>
-					<label for="firstName"> First Name </label>
-					<input type="text" name="firstName" required />
-					<span>This field is required</span>
-				</div>
-				<div>
-					<label for="lastName">Last Name</label>
-					<input type="text" name="lastName" required />
-					<span>This field is required</span>
-				</div>
-				<div>
-					<label for="email">Email Address</label>
+					<label for="email">Email Address *</label>
 					<input type="email" required name="email" />
 					<span>Please enter a valid email address</span>
 					<span>This field is required</span>
 				</div>
 				<div>
-					<label for="enquiry">Query Type</label
-					><input
-						type="radio"
-						title="General Enquiry"
-						name="enquiry"
-						required
-					/><input
-						type="radio"
-						title="Support Request"
-						name="enquiry"
-						required
-					/><span>Please select a query type</span>
+					<label for="enquiry">Query Type *</label>
+					<section>
+						<div class="enquiry">
+							<input type="radio" name="enquiry" required />
+							<label for="enquiry">General Enquiry</label>
+						</div>
+						<div class="enquiry">
+							<input
+								type="radio"
+								name="enquiry"
+								required
+								class="enquiry"
+							/>
+							<label for="enquiry">Support Request</label>
+						</div>
+					</section>
+					<span>Please select a query type</span>
 				</div>
 				<div>
-					<label for="message">Message</label><input type="text" />
+					<label for="message">Message</label
+					><input type="text" id="message" />
 					<span>This field is required</span>
 				</div>
 				<div>
-					<input type="checkbox" name="consent" id="" /><label
+					<input type="checkbox" name="consent" id="consent" /><label
 						for="consent"
 						>I consent to being contacted by the team</label
 					>
