@@ -25,35 +25,44 @@
 			<form action="">
 				<h1>Contact Us</h1>
 				<div>
-					First Name
-					<input type="text" /><span>This field is required</span>
-				</div>
-				<div>
-					Last Name<input type="text" /><span
-						>This field is required</span
-					>
-				</div>
-				<div>
-					Email Address<input type="text" /><span
-						>Please enter a valid email address</span
-					>
+					<label for="firstName"> First Name </label>
+					<input type="text" name="firstName" required />
 					<span>This field is required</span>
 				</div>
 				<div>
-					Query Type<input
+					<label for="lastName">Last Name</label>
+					<input type="text" name="lastName" required />
+					<span>This field is required</span>
+				</div>
+				<div>
+					<label for="email">Email Address</label>
+					<input type="email" required name="email" />
+					<span>Please enter a valid email address</span>
+					<span>This field is required</span>
+				</div>
+				<div>
+					<label for="enquiry">Query Type</label
+					><input
 						type="radio"
 						title="General Enquiry"
-					/><input type="radio" title="Support Request" /><span
-						>Please select a query type</span
-					>
+						name="enquiry"
+						required
+					/><input
+						type="radio"
+						title="Support Request"
+						name="enquiry"
+						required
+					/><span>Please select a query type</span>
 				</div>
 				<div>
-					Message<input type="text" />
+					<label for="message">Message</label><input type="text" />
 					<span>This field is required</span>
 				</div>
 				<div>
-					<input type="checkbox" name="consent" id="" />I consent to
-					being contacted by the team
+					<input type="checkbox" name="consent" id="" /><label
+						for="consent"
+						>I consent to being contacted by the team</label
+					>
 					<span
 						>To submit this form, please consent to being
 						contacted</span
